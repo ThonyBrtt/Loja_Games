@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reload Games - Promoções</title>
+  <link rel="stylesheet" href="style/promo.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <img src="assets/logo.png" alt="Reload Games" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="loja.html">Loja</a></li>
+          <li><a href="promocoes.html" class="active">Promoções</a></li>
+          <li><a href="suporte.html">Suporte</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Promoções Ativas</h1>
+    <p>Confira ofertas por tempo limitado.</p>
+
+    <div class="filter-controls">
+  <input type="text" id="searchInput" placeholder="Buscar jogo..." />
+
+  <input type="number" id="minPrice" placeholder="Preço mínimo" min="0" />
+  <input type="number" id="maxPrice" placeholder="Preço máximo" min="0" />
+
+    <select id="sortSelect">
+    <option value="best-discount">Melhor promoção</option>
+    <option value="name-asc">Nome A-Z</option>
+    <option value="name-desc">Nome Z-A</option>
+  </select>
+    </div>
+
+    <div class="promo-cards" id="promoCards">
+
+      <div class="promo-card" data-name="Doom Eternal">
+        <div class="discount-badge">-60%</div>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1222730/header.jpg" alt="Doom Eternal" />
+        <h3>Doom Eternal</h3>
+        <p class="price">
+          <span class="old-price">R$ 199,99</span>
+          <span class="new-price">R$ 79,99</span>
+        </p>
+        <a href="loja.html"><button>Comprar</button></a>
+      </div>
+
+      <div class="promo-card" data-name="Death Stranding">
+        <div class="discount-badge">-60%</div>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1240440/header.jpg" alt="Death Stranding" />
+        <h3>Death Stranding</h3>
+        <p class="price">
+          <span class="old-price">R$ 149,99</span>
+          <span class="new-price">R$ 59,99</span>
+        </p>
+        <a href="loja.html"><button>Comprar</button></a>
+      </div>
+
+      <div class="promo-card" data-name="Monster Hunter: World">
+        <div class="discount-badge">-58%</div>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/813780/header.jpg" alt="Monster Hunter: World" />
+        <h3>Monster Hunter: World</h3>
+        <p class="price">
+          <span class="old-price">R$ 119,99</span>
+          <span class="new-price">R$ 49,99</span>
+        </p>
+        <a href="loja.html"><button>Comprar</button></a>
+      </div>
+
+      <div class="promo-card" data-name="Control">
+        <div class="discount-badge">-61%</div>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1118130/header.jpg" alt="Control" />
+        <h3>Control</h3>
+        <p class="price">
+          <span class="old-price">R$ 139,99</span>
+          <span class="new-price">R$ 54,99</span>
+        </p>
+        <a href="loja.html"><button>Comprar</button></a>
+      </div>
+
+      <div class="promo-card" data-name="Terraria">
+        <div class="discount-badge">-50%</div>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/252950/header.jpg" alt="Terraria" />
+        <h3>Terraria</h3>
+        <p class="price">
+          <span class="old-price">R$ 29,99</span>
+          <span class="new-price">R$ 14,99</span>
+        </p>
+        <a href="loja.html"><button>Comprar</button></a>
+      </div>
+
+      <div class="promo-card" data-name="Hollow Knight">
+        <div class="discount-badge">-56%</div>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/945360/header.jpg" alt="Hollow Knight" />
+        <h3>Hollow Knight</h3>
+        <p class="price">
+          <span class="old-price">R$ 44,99</span>
+          <span class="new-price">R$ 19,99</span>
+        </p>
+        <a href="loja.html"><button>Comprar</button></a>
+      </div>
+
+      <div class="promo-card" data-name="Saints Row IV">
+        <div class="discount-badge">-58%</div>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/48700/header.jpg" alt="Saints Row IV" />
+        <h3>Saints Row IV</h3>
+        <p class="price">
+          <span class="old-price">R$ 59,99</span>
+          <span class="new-price">R$ 24,99</span>
+        </p>
+        <a href="loja.html"><button>Comprar</button></a>
+      </div>
+
+      <div class="promo-card" data-name="Ori and the Blind Forest">
+        <div class="discount-badge">-60%</div>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/361420/header.jpg" alt="Ori and the Blind Forest" />
+        <h3>Ori and the Blind Forest</h3>
+        <p class="price">
+          <span class="old-price">R$ 39,99</span>
+          <span class="new-price">R$ 15,99</span>
+        </p>
+        <a href="loja.html"><button>Comprar</button></a>
+      </div>
+
+      <div class="promo-card" data-name="ARK: Survival Evolved">
+        <div class="discount-badge">-58%</div>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/252490/header.jpg" alt="ARK: Survival Evolved" />
+        <h3>ARK: Survival Evolved</h3>
+        <p class="price">
+          <span class="old-price">R$ 119,99</span>
+          <span class="new-price">R$ 49,99</span>
+        </p>
+        <a href="loja.html"><button>Comprar</button></a>
+      </div>
+
+      <div class="promo-card" data-name="Cuphead">
+        <div class="discount-badge">-58%</div>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/550430/header.jpg" alt="Cuphead" />
+        <h3>Cuphead</h3>
+        <p class="price">
+          <span class="old-price">R$ 44,99</span>
+          <span class="new-price">R$ 18,99</span>
+        </p>
+        <a href="loja.html"><button>Comprar</button></a>
+      </div>
+
+    </div>
+  </main>
+  <script src="JS/promo.js"></script>
+</body>
+</html>

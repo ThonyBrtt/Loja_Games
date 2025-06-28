@@ -1,0 +1,189 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0e0e0e;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+/* Container padrão */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+header {
+  background-color: #111;
+  padding: 20px 0;
+  border-bottom: 1px solid #222;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.logo {
+  width: 140px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #aaa;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a:hover,
+nav a.active {
+  color: #00ffc3;
+}
+
+nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #00ffc3;
+}
+
+/* HERO (banner principal) */
+.hero {
+  background: linear-gradient(90deg, #0f0f0f 0%, #1a1a1a 100%);
+  padding: 80px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #00ffc3;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #00ffc3;
+  color: #000;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #00c3a3;
+}
+
+/* GAMES EM DESTAQUE */
+main {
+  padding: 60px 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #00ffc3;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.game-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 255, 195, 0.05);
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 255, 195, 0.15);
+}
+
+.game-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.game-card h3 {
+  font-size: 1.2rem;
+  margin: 15px 0 5px;
+}
+
+.price {
+  color: #00e676;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.game-card button {
+  background: #00ffc3;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.3s;
+}
+
+.game-card button:hover {
+  background: #00c3a3;
+}
+
+/* FOOTER */
+footer {
+  background-color: #111;
+  color: #777;
+  text-align: center;
+  padding: 25px 0;
+  border-top: 1px solid #222;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

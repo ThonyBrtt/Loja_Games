@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  background-color: #0f1115;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  line-height: 1.6;
+}
+
+header, footer {
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 140px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #aaa;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a.active,
+nav a:hover {
+  color: #42a5f5;
+}
+
+nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #42a5f5;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  color: #42a5f5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+main p {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+.contatos h2 {
+  font-size: 2rem;
+  color: #00b0ff;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #00b0ff;
+  padding-bottom: 8px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contatos ul {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contatos ul li {
+  font-size: 1.1rem;
+  margin: 12px 0;
+}
+
+.contatos ul li strong {
+  color: #00b0ff;
+}
+
+.contatos ul li a {
+  color: #42a5f5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contatos ul li a:hover {
+  color: #82c7ff;
+  text-decoration: underline;
+}

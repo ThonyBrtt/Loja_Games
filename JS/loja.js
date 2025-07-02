@@ -3,22 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const minPriceInput = document.getElementById('minPrice');
   const maxPriceInput = document.getElementById('maxPrice');
   const sortSelect = document.getElementById('sortSelect');
-  const promoCardsContainer = document.querySelector('.promo-cards');
+  const promoCardsContainer = document.getElementById('promoCards');
   const promoCards = Array.from(document.querySelectorAll('.promo-card'));
 
   function getNewPrice(card) {
-    return parseFloat(
-      card.querySelector('.new-price')?.textContent.replace(/[R$\s]/g, '').replace(',', '.') || '0'
-    );
+    const priceText = card.querySelector('.new-price').textContent;
+    const numeric = priceText.replace(/[^\d,\.]/g, '').replace(',', '.');
+    return parseFloat(numeric) || 0;
   }
 
   function getDiscount(card) {
     const badge = card.querySelector('.discount-badge');
-    return badge ? parseInt(badge.textContent.replace(/[^0-9]/g, '')) : 0;
+    if (!badge) return 0;
+    return parseInt(badge.textContent.replace(/[^0-9]/g, '')) || 0;
   }
 
   function getName(card) {
-    return card.getAttribute('data-name')?.toLowerCase() || '';
+    return card.getAttribute('data-name').toLowerCase();
   }
 
   function filterAndSort() {
@@ -33,16 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return name.includes(search) && price >= minPrice && price <= maxPrice;
     });
 
-    switch (sortBy) {
-      case 'best-discount':
-        filtered.sort((a, b) => getDiscount(b) - getDiscount(a));
-        break;
-      case 'name-asc':
-        filtered.sort((a, b) => getName(a).localeCompare(getName(b)));
-        break;
-      case 'name-desc':
-        filtered.sort((a, b) => getName(b).localeCompare(getName(a)));
-        break;
+    if (sortBy === 'best-discount') {
+      filtered.sort((a, b) => getDiscount(b) - getDiscount(a));
+    } else if (sortBy === 'name-asc') {
+      filtered.sort((a, b) => getName(a).localeCompare(getName(b)));
+    } else if (sortBy === 'name-desc') {
+      filtered.sort((a, b) => getName(b).localeCompare(getName(a)));
     }
 
     promoCardsContainer.innerHTML = '';

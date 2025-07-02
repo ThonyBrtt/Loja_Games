@@ -1,5 +1,5 @@
 🔥 Nome: Loja_Games
-Descrição atualizada:
+Page: https://thonybrtt.github.io/Loja_Games/
 
 Loja_Games é um projeto de site visual para uma loja de vendas de jogos digitais. O objetivo é simular uma experiência real de e-commerce, com foco em design moderno, navegação intuitiva e apresentação de produtos com promoções dinâmicas.
 
